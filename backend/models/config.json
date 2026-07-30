@@ -1,0 +1,108 @@
+{
+  "clinical_weight": 0.5,
+  "image_weight": 0.5,
+  "final_threshold": 0.5,
+
+  "image_size": [
+    224,
+    224
+  ],
+
+  "clinical_model": {
+    "type": "VotingClassifier (XGBoost + CatBoost, soft voting, weights=[2,2])",
+
+    "raw_feature_order": [
+      "Age (yrs)",
+      "Weight (Kg)",
+      "Height(Cm)",
+      "BMI",
+      "Blood Group",
+      "Pulse rate(bpm)",
+      "RR (breaths/min)",
+      "Hb(g/dl)",
+      "Cycle(R/I)",
+      "Cycle length(days)",
+      "Marraige Status (Yrs)",
+      "Pregnant(Y/N)",
+      "No. of aborptions",
+      "I   beta-HCG(mIU/mL)",
+      "II    beta-HCG(mIU/mL)",
+      "FSH(mIU/mL)",
+      "LH(mIU/mL)",
+      "FSH/LH",
+      "Hip(inch)",
+      "Waist(inch)",
+      "Waist:Hip Ratio",
+      "TSH (mIU/L)",
+      "AMH(ng/mL)",
+      "PRL(ng/mL)",
+      "Vit D3 (ng/mL)",
+      "PRG(ng/mL)",
+      "RBS(mg/dl)",
+      "Weight gain(Y/N)",
+      "hair growth(Y/N)",
+      "Skin darkening (Y/N)",
+      "Hair loss(Y/N)",
+      "Pimples(Y/N)",
+      "Fast food (Y/N)",
+      "Reg.Exercise(Y/N)",
+      "BP _Systolic (mmHg)",
+      "BP _Diastolic (mmHg)",
+      "Follicle No. (L)",
+      "Follicle No. (R)",
+      "Avg. F size (L) (mm)",
+      "Avg. F size (R) (mm)",
+      "Endometrium (mm)"
+    ],
+
+    "selected_features": [
+      "Weight (Kg)",
+      "Hb(g/dl)",
+      "Cycle(R/I)",
+      "Cycle length(days)",
+      "Marraige Status (Yrs)",
+      "FSH/LH",
+      "Waist(inch)",
+      "AMH(ng/mL)",
+      "Vit D3 (ng/mL)",
+      "RBS(mg/dl)",
+      "Weight gain(Y/N)",
+      "hair growth(Y/N)",
+      "Skin darkening (Y/N)",
+      "Pimples(Y/N)",
+      "Fast food (Y/N)",
+      "Reg.Exercise(Y/N)",
+      "Follicle No. (L)",
+      "Follicle No. (R)",
+      "Avg. F size (R) (mm)",
+      "Endometrium (mm)"
+    ],
+
+    "decision_threshold": 0.39,
+
+    "metrics": {
+      "accuracy": 0.9266,
+      "precision": 0.9375,
+      "recall": 0.8333,
+      "f1_score": 0.8824,
+      "roc_auc": 0.9494
+    }
+  },
+
+  "image_model": {
+    "file": "ResNet50_Finetuned.keras",
+    "input_size": [
+      224,
+      224
+    ],
+    "preprocessing": "load_img(target_size=(224,224)) -> img_to_array -> expand_dims -> divide by 255.0",
+    "note": "No keras.applications.resnet50.preprocess_input was used during training."
+  },
+
+  "fusion": {
+    "method": "decision_level_fusion",
+    "w_clinical": 0.5,
+    "w_image": 0.5,
+    "final_threshold": 0.5
+  }
+}

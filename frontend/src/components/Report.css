@@ -1,0 +1,325 @@
+/* ===========================================
+   REPORT CONTAINER
+=========================================== */
+
+.report-container{
+    max-width:1100px;
+    margin:40px auto;
+    background:#ffffff;
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 10px 35px rgba(0,0,0,.12);
+    font-family:'Segoe UI',sans-serif;
+    color:#333;
+}
+
+/* ===========================================
+   COVER
+=========================================== */
+
+.report-cover{
+    text-align:center;
+    border-bottom:3px solid #ff5c8a;
+    padding-bottom:30px;
+    margin-bottom:35px;
+}
+
+.report-cover h1{
+    font-size:42px;
+    color:#ff4f81;
+    margin-bottom:10px;
+}
+
+.report-cover h2{
+    font-size:22px;
+    color:#444;
+    margin-bottom:15px;
+    line-height:1.5;
+}
+
+.report-cover p{
+    color:#777;
+    font-size:17px;
+}
+
+/* ===========================================
+   HEADER
+=========================================== */
+
+.report-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:35px;
+    gap:30px;
+}
+
+.hospital-box{
+    background:#fff4f7;
+    padding:20px;
+    border-radius:12px;
+    border-left:6px solid #ff5c8a;
+    min-width:280px;
+}
+
+.hospital-box h3{
+    color:#ff4f81;
+    margin-bottom:10px;
+}
+
+/* ===========================================
+   SECTIONS
+=========================================== */
+
+.report-section{
+    margin-top:35px;
+}
+
+.report-section h3{
+    color:#ff4f81;
+    margin-bottom:18px;
+    border-bottom:2px solid #ffd5df;
+    padding-bottom:8px;
+}
+
+/* ===========================================
+   PATIENT GRID
+=========================================== */
+
+.patient-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.patient-grid div{
+    background:#fafafa;
+    border-radius:10px;
+    padding:18px;
+}
+
+.patient-grid strong{
+    color:#555;
+}
+
+.patient-grid p{
+    margin-top:8px;
+    font-size:18px;
+}
+
+/* ===========================================
+   PREDICTION
+=========================================== */
+
+.prediction-banner{
+    background:#fff8fb;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.prediction-banner h2{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+/* ===========================================
+   CONFIDENCE CARDS
+=========================================== */
+
+.prediction-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.prediction-card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.prediction-card h4{
+    color:#666;
+    margin-bottom:15px;
+}
+
+.prediction-card h2{
+    color:#ff4f81;
+    margin-top:15px;
+    font-size:30px;
+}
+
+.final-card{
+    border:2px solid #ff5c8a;
+}
+
+/* ===========================================
+   PROGRESS BAR
+=========================================== */
+
+.progress{
+    width:100%;
+    height:12px;
+    background:#ececec;
+    border-radius:25px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    height:100%;
+    background:linear-gradient(90deg,#4CAF50,#81C784);
+    transition:.8s;
+}
+
+.final-fill{
+    background:linear-gradient(90deg,#ff5c8a,#ff8fab);
+}
+
+/* ===========================================
+   RISK
+=========================================== */
+
+.risk-box{
+    background:#fafafa;
+    border-radius:12px;
+    padding:25px;
+}
+
+.risk-badge{
+    display:inline-block;
+    padding:10px 24px;
+    border-radius:30px;
+    color:white;
+    font-weight:bold;
+    font-size:17px;
+    margin-bottom:18px;
+}
+
+/* ===========================================
+   CONTENT BOXES
+=========================================== */
+
+.interpretation-box,
+.recommendation-box,
+.disclaimer-box{
+    background:#fafafa;
+    padding:25px;
+    border-radius:12px;
+    line-height:1.8;
+}
+
+.recommendation-box ul{
+    padding-left:20px;
+}
+
+.recommendation-box li{
+    margin-bottom:10px;
+}
+
+/* ===========================================
+   FOOD GRID
+=========================================== */
+
+.food-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.food-card{
+    background:#fffdfd;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.food-card h4{
+    color:#ff4f81;
+    margin-bottom:15px;
+}
+
+.food-card ul{
+    padding-left:20px;
+}
+
+.food-card li{
+    margin-bottom:10px;
+}
+
+/* ===========================================
+   FOOTER
+=========================================== */
+
+.report-footer{
+    margin-top:50px;
+    text-align:center;
+    color:#777;
+}
+
+.report-footer h2{
+    color:#ff4f81;
+    margin:20px 0 10px;
+}
+
+/* ===========================================
+   BUTTONS
+=========================================== */
+
+.report-buttons{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.print-btn,
+.download-btn{
+
+    border:none;
+    color:white;
+    padding:14px 30px;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.print-btn{
+    background:#3b82f6;
+}
+
+.download-btn{
+    background:#10b981;
+}
+
+.print-btn:hover,
+.download-btn:hover{
+    transform:translateY(-3px);
+    opacity:.9;
+}
+
+/* ===========================================
+   PRINT
+=========================================== */
+
+@media print{
+
+.report-buttons{
+display:none;
+}
+
+body{
+background:white;
+}
+
+.report-container{
+box-shadow:none;
+margin:0;
+padding:20px;
+}
+
+}
