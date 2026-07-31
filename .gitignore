@@ -20,3 +20,4 @@ Thumbs.db
 
 # Zip
 *.zip
+backend/models/ResNet50_Finetuned.keras
