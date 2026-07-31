@@ -13,4 +13,4 @@ Pillow==10.4.0
 opencv-python==4.10.0.84
 
 gunicorn==23.0.0
-python-dotenv==1.0.1p
+python-dotenv==1.0.1
